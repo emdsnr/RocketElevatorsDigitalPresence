@@ -66,7 +66,7 @@
 
 					<div class="col-md-4">
 						<h6 style="color: #0b64a0">why rocket elevators®?</h6>
-						<p class="text-justify">rocket elevatos® is regarded as one of the best elevator companies in the business. we've been providing you with top quality elevators for more than 40 years. our client satisfaction is off the roof (no cap).</p>
+						<p class="text-justify">rocket elevatos® is regarded as one of the best elevator companies in the business. we've been providing you with top quality elevators for more than 40 years. our client satisfaction is off the roof.</p>
 					</div>
 
 					<div class="col-md-4">
@@ -187,8 +187,8 @@
 												CONTACT
 											</a>
 											<ul class="dropdown-menu">
-												<li><a href="#contact">CONTACT US</a></li>
-												<li><a href="quote.html">GET A QUOTE</a></li>
+												<li><a href="index.html#contact">CONTACT US</a></li>
+												<li><a href="#purchase">GET A QUOTE</a></li>
 											</ul>
 										</li>
 								</ul>
@@ -216,7 +216,7 @@
 				-->
 
 				<!-- Video Background - replace videoURL with your youtube video URL -->
-				<a id="YTPlayer" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=9MhOq86Pqcg',containment:'body',autoPlay:true, mute:true, startAt:0, stopAt:200, opacity:1}">video not supported</a>
+				<a id="YTPlayer" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=9MhOq86Pqcg', containment:'body', autoPlay:true, mute:true, startAt:0, stopAt:200, opacity:1}">video not supported</a>
 				<!--/Video Background -->
 
 				<div class="display-table">
@@ -238,13 +238,24 @@
 			</section>
 			<!-- /SLIDER -->
 
+			
+			<!-- BUTTON CALLOUT -->
+            <a href="#contact" class="btn btn-xlg btn-primary fs-20 fullwidth m-0 rad-0 p-40">
+                <span class="font-lato fs-30">
+                    did rocket elevators® convince you? 
+                    <strong>contact us &raquo;</strong>
+                </span>
+			</a>
+			</section>
+			<!-- /BUTTON CALLOUT -->
+
 
 			<!-- FORM -->
 			<section id="purchase">
 			<div class="alert alert-transparent bordered-bottom m-0">
-				<div class="container">
+				<div class="container col-md-4">
+					<div class="col-md-4">
 						<form id="pick_building">
-							<div class="col-md-4">
 								<label for="building_type" class="form-label">building type</label>
 								<select id="building_type" class="form-control pointer" name="form_building">
 									<option>[select]</option>
@@ -258,54 +269,50 @@
 
 								<button id="confirm_building_btn" type="button" class="btn btn-primary">confirm</button>
 						</form>
+					</div>
 
-						<br /><br /><br />
-
-							<div>
-								<div id="question1" class="justify-content-center" style="display: none;">
-                                        <label id="question1-label" for="question-1" class="form-label"></label>
-                                        <input required type="number" value="" min="0" class="form-control" name="input_question1" id="input_question1" oninput="validity.valid||(value='');" />
-								</div><br />
-								<div id="question2" class="justify-content-center" style="display: none;">
-                                        <label id="question2-label" for="question-2" class="form-label"></label>
-                                        <input required type="number" value="" min="0" class="form-control" name="input_question2" id="input_question2" oninput="validity.valid||(value='');" />
-								</div><br />
-								<div id="question3" class="justify-content-center" style="display: none;">
-                                        <label id="question3-label" for="question-3" class="form-label"></label>
-                                        <input required type="number" value="" min="0" class="form-control" name="input_question3" id="input_question3" oninput="validity.valid||(value='');" />
-								</div><br />
-								<div id="question4" class="justify-content-center" style="display: none;">
-                                        <label id="question4-label" for="question-4" class="form-label"></label>
-                                        <input required type="number" value="" min="0" class="form-control" name="input_question4" id="input_question4" oninput="validity.valid||(value='');" />
-								</div><br />
-								<div id="question5" class="justify-content-center" style="display: none;">
-                                        <label id="question5-label" for="question-5" class="form-label"></label>
-                                        <input required type="number" value="" min="0" class="form-control" name="input_question5" id="input_question5" oninput="validity.valid||(value='');" />
-								</div><br />
-								<div id="question6" class="justify-content-center" style="display: none;">
-                                        <label id="question6-label" for="question-6" class="form-label"></label>
-                                        <input required type="number" value="" min="1" max="24" class="form-control" name="input_question6" id="input_question6" oninput="validity.valid||(value='');" />
-								</div><br />
-								<div>
-									<div class='radio-container'>
-										<label for="standard">standard</label><input type="radio" name="product-line" id="standard" checked/>
-									</div>
-									<div class='radio-container'>
-										<label for="premium">premium</label><input type="radio" name="product-line" id="premium"/>
-									</div>
-									<div class='radio-container'>
-										<label for="excelium">excelium</label><input type="radio" name="product-line" id="excelium"/>
-									</div>
-									
-									
-									
-
-								</div>
-								<h4 id="total-cages" class="total-elevators">elevators: <span id="total_cages"></span></h4>
-								<h4 id="total-fees" class="total-fees">fees: <span id="total_fees"></span></h4>
-								<h3 id="total-price" class="total-price">total: <span id="total_price"></span></h3>
+					<br /><br /><br />
+					
+					<div class="col-md-4">
+						<div id="question1" class="justify-content-center" style="display: none;">
+								<label id="question1-label" for="question-1" class="form-label"></label>
+								<input required type="number" value="" min="0" class="form-control" name="input_question1" id="input_question1" oninput="validity.valid||(value='');" />
+						</div><br />
+						<div id="question2" class="justify-content-center" style="display: none;">
+								<label id="question2-label" for="question-2" class="form-label"></label>
+								<input required type="number" value="" min="0" class="form-control" name="input_question2" id="input_question2" oninput="validity.valid||(value='');" />
+						</div><br />
+						<div id="question3" class="justify-content-center" style="display: none;">
+								<label id="question3-label" for="question-3" class="form-label"></label>
+								<input required type="number" value="" min="0" class="form-control" name="input_question3" id="input_question3" oninput="validity.valid||(value='');" />
+						</div><br />
+						<div id="question4" class="justify-content-center" style="display: none;">
+								<label id="question4-label" for="question-4" class="form-label"></label>
+								<input required type="number" value="" min="0" class="form-control" name="input_question4" id="input_question4" oninput="validity.valid||(value='');" />
+						</div><br />
+						<div id="question5" class="justify-content-center" style="display: none;">
+								<label id="question5-label" for="question-5" class="form-label"></label>
+								<input required type="number" value="" min="0" class="form-control" name="input_question5" id="input_question5" oninput="validity.valid||(value='');" />
+						</div><br />
+						<div id="question6" class="justify-content-center" style="display: none;">
+								<label id="question6-label" for="question-6" class="form-label"></label>
+								<input required type="number" value="" min="1" max="24" class="form-control" name="input_question6" id="input_question6" oninput="validity.valid||(value='');" />
+						</div><br />
+						<div>
+							<div class='radio-container'>
+								<label for="standard">standard</label><input type="radio" name="product-line" id="standard" checked/>
 							</div>
-
+							<div class='radio-container'>
+								<label for="premium">premium</label><input type="radio" name="product-line" id="premium"/>
+							</div>
+							<div class='radio-container'>
+								<label for="excelium">excelium</label><input type="radio" name="product-line" id="excelium"/>
+							</div>
+						</div>
+						<h4 id="total-cages" class="total-elevators">elevators: <span id="total_cages"></span></h4>
+						<h4 id="total-fees" class="total-fees">fees: <span id="total_fees"></span></h4>
+						<h3 id="total-price" class="total-price">total: <span id="total_price"></span></h3>
+					</div>
 				</div>
 			</div>
 			</section>
@@ -389,16 +396,7 @@
 
 		<!-- PAGELEVEL SCRIPTS -->
 		<script src="assets/js/contact.js"></script>
-
-		<!-- 
-			GMAP.JS 
-			http://hpneo.github.io/gmaps/
-		-->
-		<script src="//maps.google.com/maps/api/js?key=AIzaSyCqCn84CgZN6o1Xc3P4dM657HIxkX3jzPY"></script>
-		<script src="assets/plugins/gmaps.js"></script>
 		<script src="quote.js"></script>
-		<script>
 
-		</script>
 	</body>
 </html>
