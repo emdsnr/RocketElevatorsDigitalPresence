@@ -223,13 +223,14 @@ $(document).ready(function() {
             const basements = +$("#input_question3").val() || 0
             const parkingSpaces = +$("#input_question4").val() || 0
             const occupantsPerFloor = +$("#input_question5").val() || 0
+            const openHours = +$("#input_question6").val() || 0
 
             const occupants = Math.ceil(occupantsPerFloor * ((floors + basements) / 1000));
             const columns = Math.floor((floors + basements) / 20);
             const elevators = Math.ceil(occupants * columns);
 
             cages = elevators;
-            
+
         }
 
         if (selectedProductLine === 'standard') {
