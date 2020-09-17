@@ -6823,6 +6823,7 @@ section#slider:not(.custom-form) .btn-default {
 		width:56px !important;
 		text-align:center;
 		background-color:rgba(0,0,0,0.2);
+		opacity: 0.5 !important;
 
 		-webkit-border-radius: 3px;
 		   -moz-border-radius: 3px;
