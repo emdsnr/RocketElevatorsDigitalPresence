@@ -253,11 +253,11 @@ $(document).ready(function() {
         }
         
         let fees = cages * price * feeRate;
-        let totalCom = cages * price + fees;
+        let total = cages * price + fees;
 
         $('#total_cages').text(cages);
         $('#total_fees').text(`${fees.toFixed(2)}$ (${feeRate * 100}%)`);
-        $('#total_price').text(totalCom.toFixed(2) + '$');
+        $('#total_price').text(total.toFixed(2) + '$');
 
     };
 
