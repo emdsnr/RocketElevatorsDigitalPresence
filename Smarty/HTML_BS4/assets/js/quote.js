@@ -184,24 +184,25 @@ $(document).ready(function() {
         if (buildingType === 'residential'){
 
             // residential calculations
-            const apartments = +$("#input_question1").val() || 0
-            const floors = +$("#input_question2").val() || 0
-            const basements = +$("#input_question3").val() || 0
+            const apartments = +$("#input_question1").val() || 0;
+            const floors = +$("#input_question2").val() || 0;
+            const basements = +$("#input_question3").val() || 0;
 
             const doorsPerFloor = floors === 0 ? 0 : Math.ceil(apartments / floors);
             const columns = Math.ceil(floors / 20);
 
-            cages = columns * Math.ceil(doorsPerFloor / 6)
+            cages = columns * Math.ceil(doorsPerFloor / 6);
 
 
-        } else if (buildingType === 'corporate') {
+        } else if (buildingType === 'corporate' || 'hybrid') {
 
-            // corporate calculations
-            const tenantCompanies = +$("#input_question1").val() || 0
-            const floors = +$("#input_question2").val() || 0
-            const basements = +$("#input_question3").val() || 0
-            const parkingSpaces = +$("#input_question4").val() || 0
-            const occupantsPerFloor = +$("#input_question5").val() || 0
+            // hybrid calculations
+            const tenantCompanies = +$("#input_question1").val() || 0;
+            const floors = +$("#input_question2").val() || 0;
+            const basements = +$("#input_question3").val() || 0;
+            const parkingSpaces = +$("#input_question4").val() || 0;
+            const occupantsPerFloor = +$("#input_question5").val() || 0;
+            const openHours = +$("#input_question6").val() || 0;
 
             const occupants = Math.ceil(occupantsPerFloor * ((floors + basements) / 1000));
             const columns = Math.ceil((floors + basements) / 20);
@@ -209,32 +210,12 @@ $(document).ready(function() {
             const elevators = (columns * cagesPerColumn);
             
             cages = elevators;
-
 
         } else if (buildingType === 'commercial') {
 
             // commercial calculations
             cages = +$(`#input_question5`).val() || 0;
 
-
-        } else if (buildingType === 'hybrid') {
-
-            // hybrid calculations
-            const tenantCompanies = +$("#input_question1").val() || 0
-            const floors = +$("#input_question2").val() || 0
-            const basements = +$("#input_question3").val() || 0
-            const parkingSpaces = +$("#input_question4").val() || 0
-            const occupantsPerFloor = +$("#input_question5").val() || 0
-            const openHours = +$("#input_question6").val() || 0
-
-            const occupants = Math.ceil(occupantsPerFloor * ((floors + basements) / 1000));
-            const columns = Math.ceil((floors + basements) / 20);
-            const cagesPerColumn = Math.ceil(occupants / columns);
-            const elevators = (columns * cagesPerColumn);
-            
-            cages = elevators;
-
-            cages = elevators;
 
         }
 
