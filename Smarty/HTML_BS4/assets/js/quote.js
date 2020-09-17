@@ -216,8 +216,8 @@ $(document).ready(function() {
             // commercial calculations
             cages = +$(`#input_question5`).val() || 0;
 
-
         }
+
 
         if (selectedProductLine === 'standard') {
 
@@ -246,6 +246,7 @@ $(document).ready(function() {
         $('#total_price').text(total.toFixed(2) + '$');
 
     };
+    
 
         $(`.form-control`).keyup(populateFields);
 
