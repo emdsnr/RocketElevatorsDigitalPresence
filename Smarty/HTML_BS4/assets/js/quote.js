@@ -187,10 +187,11 @@ $(document).ready(function() {
             const apartments = +$("#input_question1").val() || 0
             const floors = +$("#input_question2").val() || 0
             const basements = +$("#input_question3").val() || 0
-            const doorsPerFloor = floors === 0 ? 0 : apartments / floors;
+
+            const doorsPerFloor = floors === 0 ? 0 : Math.ceil(apartments / floors);
             const columns = Math.ceil(floors / 20);
 
-            cages = columns * (floors + basements) * Math.ceil(doorsPerFloor / 6)
+            cages = columns * Math.ceil(doorsPerFloor / 6)
 
 
         } else if (buildingType === 'corporate') {
@@ -203,9 +204,10 @@ $(document).ready(function() {
             const occupantsPerFloor = +$("#input_question5").val() || 0
 
             const occupants = Math.ceil(occupantsPerFloor * ((floors + basements) / 1000));
-            const columns = Math.floor((floors + basements) / 20);
-            const elevators = Math.ceil(occupants * columns);
-
+            const columns = Math.ceil((floors + basements) / 20);
+            const cagesPerColumn = Math.ceil(occupants / columns);
+            const elevators = (columns * cagesPerColumn);
+            
             cages = elevators;
 
 
@@ -226,8 +228,11 @@ $(document).ready(function() {
             const openHours = +$("#input_question6").val() || 0
 
             const occupants = Math.ceil(occupantsPerFloor * ((floors + basements) / 1000));
-            const columns = Math.floor((floors + basements) / 20);
-            const elevators = Math.ceil(occupants * columns);
+            const columns = Math.ceil((floors + basements) / 20);
+            const cagesPerColumn = Math.ceil(occupants / columns);
+            const elevators = (columns * cagesPerColumn);
+            
+            cages = elevators;
 
             cages = elevators;
 
